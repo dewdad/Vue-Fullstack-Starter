@@ -3,58 +3,186 @@
     "app": {
       "presets": [
         [
-          "env", {
+          "@babel/preset-env",
+          {
             "targets": {
-              "browsers": ["last 2 versions"]
+              "browsers": [
+                "last 2 versions"
+              ]
             }
           }
         ],
-        "stage-0",
-        "flow"
+        "@babel/preset-flow"
       ],
       "plugins": [
-        "transform-runtime"
+        [
+          "@babel/plugin-proposal-class-properties",
+          {
+            "loose": false
+          }
+        ],
+        [
+          "@babel/plugin-proposal-decorators",
+          {
+            "legacy": true
+          }
+        ],
+        "@babel/plugin-proposal-do-expressions",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-function-bind",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-json-strings",
+        "@babel/plugin-proposal-logical-assignment-operators",
+        [
+          "@babel/plugin-proposal-nullish-coalescing-operator",
+          {
+            "loose": false
+          }
+        ],
+        "@babel/plugin-proposal-numeric-separator",
+        [
+          "@babel/plugin-proposal-optional-chaining",
+          {
+            "loose": false
+          }
+        ],
+        [
+          "@babel/plugin-proposal-pipeline-operator",
+          {
+            "proposal": "minimal"
+          }
+        ],
+        "@babel/plugin-proposal-throw-expressions",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-transform-runtime"
       ]
     },
     "api": {
       "presets": [
         [
-          "env", {
+          "@babel/preset-env",
+          {
             "targets": {
-              "node": "6"
+              "node": "8"
             }
           }
         ],
-        "stage-0",
-        "flow"
+        "@babel/preset-flow"
       ],
       "plugins": [
         [
-          "babel-plugin-root-import", [
-            {
-              "rootPathPrefix": "~",
-              "rootPathSuffix": "src/api"
-            }
-          ]
+          "@babel/plugin-proposal-class-properties",
+          {
+            "loose": false
+          }
+        ],
+        [
+          "@babel/plugin-proposal-decorators",
+          {
+            "legacy": true
+          }
+        ],
+        "@babel/plugin-proposal-do-expressions",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-function-bind",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-json-strings",
+        "@babel/plugin-proposal-logical-assignment-operators",
+        [
+          "@babel/plugin-proposal-nullish-coalescing-operator",
+          {
+            "loose": false
+          }
+        ],
+        "@babel/plugin-proposal-numeric-separator",
+        [
+          "@babel/plugin-proposal-optional-chaining",
+          {
+            "loose": false
+          }
+        ],
+        [
+          "@babel/plugin-proposal-pipeline-operator",
+          {
+            "proposal": "minimal"
+          }
+        ],
+        "@babel/plugin-proposal-throw-expressions",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-transform-runtime",
+        [
+          "babel-plugin-root-import",
+          {
+            "paths": [
+              {
+                "rootPathPrefix": "~",
+                "rootPathSuffix": "src/api"
+              }
+            ]
+          }
         ]
       ]
     },
     "test": {
       "presets": [
         [
-          "env",
+          "@babel/preset-env",
           {
             "targets": {
-              "node": "current"
+              "node": "8"
             }
           }
         ],
-        "stage-0",
-        "flow"
+        "@babel/preset-flow"
       ],
       "plugins": [
-        "dynamic-import-node",
-        "transform-runtime"
+        [
+          "@babel/plugin-proposal-class-properties",
+          {
+            "loose": false
+          }
+        ],
+        [
+          "@babel/plugin-proposal-decorators",
+          {
+            "legacy": true
+          }
+        ],
+        "@babel/plugin-proposal-do-expressions",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-function-bind",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-json-strings",
+        "@babel/plugin-proposal-logical-assignment-operators",
+        [
+          "@babel/plugin-proposal-nullish-coalescing-operator",
+          {
+            "loose": false
+          }
+        ],
+        "@babel/plugin-proposal-numeric-separator",
+        [
+          "@babel/plugin-proposal-optional-chaining",
+          {
+            "loose": false
+          }
+        ],
+        [
+          "@babel/plugin-proposal-pipeline-operator",
+          {
+            "proposal": "minimal"
+          }
+        ],
+        "@babel/plugin-proposal-throw-expressions",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-transform-runtime",
+        "babel-plugin-dynamic-import-node"
       ]
     }
   }
